@@ -1,30 +1,24 @@
-/* === Modern CSS Reset === */
-        :root {
-            --primary: #8B0000;
-            --primary-dark: #600000;
-            --primary-light: #B22222;
-            --secondary: #D4AF37;
-            --dark: #222222;
-            --light: #F5F5F5;
-            --gray: #777777;
-            --white: #FFFFFF;
-            --font-main: 'Arial', sans-serif;
-            --font-arabic: 'Traditional Arabic', 'Arial', sans-serif;
-        }
+/* style.css dosyasında değiştirilecek kısım */
+:root {
+    --primary: #054d0e;
+    --primary-dark: #043f04;
+    --primary-light: #043f04;
+    --secondary: #D4AF37;
+    --dark: #222222;
+    --light: #F5F5F5;
+    --gray: #777777;
+    --white: #FFFFFF;
+    --font-main: 'Arial', sans-serif;
+    --font-arabic: 'Traditional Arabic', 'Arial', sans-serif;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-arabic);
-            line-height: 1.8;
-            color: var(--dark);
-            background-color: var(--light);
-            overflow-x: hidden;
-        }
+body {
+    font-family: var(--font-arabic);
+    line-height: 1.8;
+    color: var(--dark);
+    background-color: #043f04; /* Yeşil arka plan */
+    overflow-x: hidden;
+}
 
         /* === Beautiful Header === */
         .government-header {
