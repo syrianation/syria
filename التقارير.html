@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقارير - الهيئة الوطنية للجزيرة العربية السورية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- === Yeni Modern Header === -->
+<header class="new-modern-header">
+  <div class="new-header-inner">
+    <div class="new-header-logo">
+      <a href="index.html"><img src="https://files.catbox.moe/n5df2d.png" alt="Logo"></a>
+    </div>
+    <div class="new-header-title">الهيئة الوطنية للجزيرة العربية السورية</div>
+    <div class="new-header-right">
+      <span class="new-header-date" id="headerDate"></span>
+      <button class="new-nav-toggle" id="navToggle" aria-label="Menüyü Aç/Kapat">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </div>
+  <nav class="new-main-nav" id="mainNav">
+    <ul class="new-nav-list">
+      <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+      <li><a href="النبذة-العريفية.html" class="nav-link">النبذة العريفية</a></li>
+      <li><a href="البيان-الرسمي.html" class="nav-link">البيان الرسمي</a></li>
+      <li><a href="توثيق-الانتهاكات.html" class="nav-link">توثيق الانتهاكات</a></li>
+      <li><a href="الأخبار.html" class="nav-link">الأخبار</a></li>
+      <li><a href="مقالات.html" class="nav-link">مقالات</a></li>
+      <li><a href="التقارير.html" class="nav-link active">التقارير</a></li>
+      <li><a href="المفقودين والمعتقلين.html" class="nav-link">المفقودون والمعتقلون</a></li>
+      <li><a href="الاتصال.html" class="nav-link">الاتصال</a></li>
+    </ul>
+  </nav>
+</header>
+<script>
+function updateArabicDate() {
+  const dateElement = document.getElementById('headerDate');
+  if (dateElement) {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const today = new Date();
+    const arabicDate = today.toLocaleDateString('ar-SY', options);
+    dateElement.textContent = arabicDate;
+  }
+}
+updateArabicDate();
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+if(navToggle && mainNav) {
+  navToggle.addEventListener('click', function() {
+    mainNav.classList.toggle('show');
+    navToggle.classList.toggle('open');
+  });
+}
+</script>
+
+    <!-- === Main Content === -->
+    <div class="main-container">
+        <main>
+            <section class="page-content">
+                <h1 class="section-title">التقارير</h1>
+                <p>محتوى الصفحة هنا...</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- === Footer === -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">الهيئة الوطنية</div>
+                <p class="footer-about">
+                    الهيئة الوطنية للجزيرة العربية السورية هيئة مستقلة تعمل على توثيق الانتهاكات ودعم حقوق السوريين منذ تأسيسها عام 2025.
+                </p>
+                <div class="footer-social">
+                    <a href="https://linktr.ee/Prjazirah?utm_source=linktree_profile_share&ltsid=9f9a740e-823f-406b-b86d-7f9454041934" class="social-icon">🔗</a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">الرئيسية</a></li>
+                    <li><a href="النبذة-العريفية.html" class="footer-link">النبذة العريفية</a></li>
+                    <li><a href="البيان-الرسمي.html" class="footer-link">البيان الرسمي</a></li>
+                    <li><a href="توثيق-الانتهاكات.html" class="footer-link">توثيق الانتهاكات</a></li>
+                    <li><a href="الأخبار.html" class="footer-link">الأخبار</a></li>
+                    <li><a href="مقالات.html" class="footer-link">مقالات</a></li>
+                    <li><a href="التقارير.html" class="footer-link">التقارير</a></li>
+                    <li><a href="الاتصال.html" class="footer-link">الاتصال</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">اتصل بنا</h3>
+                <div class="footer-contact">
+                    <div class="footer-contact-item">
+                        <i class="contact-icon">📍</i>
+                        <span>دمشق، سوريا</span>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <i class="contact-icon">✉️</i>
+                        <span>prjazirah@gmail.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="contact-icon">🕒</i>
+                        <span>الأحد - الخميس: 8 صباحاً - 4 مساءً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 الهيئة الوطنية للجزيرة العربية السورية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- === JavaScript === -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الهيئة الوطنية للجزيرة العربية السورية</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+  .modern-header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0;
+  }
+  .modern-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 1rem 1.2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+  }
+  .header-logo img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    display: block;
+  }
+  .header-title {
+    flex: 1 1 0;
+    text-align: center;
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Cairo', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .header-date {
+    flex: 0 0 auto;
+    color: #000;
+    font-size: 1.1rem;
+    text-align: right;
+    min-width: 120px;
+    font-family: 'Cairo', Arial, sans-serif;
+  }
+  @media (max-width: 900px) {
+    .modern-header-container {
+      padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+    }
+    .header-logo img {
+      width: 48px;
+      height: 48px;
+    }
+    .header-title {
+      font-size: 1.2rem;
+    }
+    .header-date {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .modern-header-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+      padding: 0.5rem 0.2rem 0.7rem 0.2rem;
+    }
+    .header-logo {
+      justify-content: center;
+      margin-bottom: 0.2rem;
+    }
+    .header-title {
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+    }
+    .header-date {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+    <!-- === Yeni Modern Header === -->
+<header class="new-modern-header">
+  <div class="new-header-inner">
+    <div class="new-header-logo">
+      <a href="index.html"><img src="https://files.catbox.moe/n5df2d.png" alt="Logo"></a>
+    </div>
+    <div class="new-header-title">الهيئة الوطنية للجزيرة العربية السورية</div>
+    <div class="new-header-right">
+      <span class="new-header-date" id="headerDate"></span>
+      <button class="new-nav-toggle" id="navToggle" aria-label="Menüyü Aç/Kapat">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </div>
+  <nav class="new-main-nav" id="mainNav">
+    <ul class="new-nav-list">
+      <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+      <li><a href="النبذة-العريفية.html" class="nav-link">النبذة العريفية</a></li>
+      <li><a href="البيان-الرسمي.html" class="nav-link">البيان الرسمي</a></li>
+      <li><a href="توثيق-الانتهاكات.html" class="nav-link">توثيق الانتهاكات</a></li>
+      <li><a href="الأخبار.html" class="nav-link">الأخبار</a></li>
+      <li><a href="مقالات.html" class="nav-link">مقالات</a></li>
+      <li><a href="التقارير.html" class="nav-link">التقارير</a></li>
+      <li><a href="المفقودين والمعتقلين.html" class="nav-link">المفقودون والمعتقلون</a></li>
+      <li><a href="الاتصال.html" class="nav-link">الاتصال</a></li>
+    </ul>
+  </nav>
+</header>
+<script>
+function updateArabicDate() {
+  const dateElement = document.getElementById('headerDate');
+  if (dateElement) {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const today = new Date();
+    const arabicDate = today.toLocaleDateString('ar-SY', options);
+    dateElement.textContent = arabicDate;
+  }
+}
+updateArabicDate();
+// Hamburger menü fonksiyonu
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+if(navToggle && mainNav) {
+  navToggle.addEventListener('click', function() {
+    mainNav.classList.toggle('show');
+    navToggle.classList.toggle('open');
+  });
+}
+</script>
+
+    <!-- === News Section === -->
+    <!-- Tüm haber ve örnek içerikler silindi, sadece boş ana sayfa -->
+
+    <!-- === Footer === -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="https://files.catbox.moe/n5df2d.png" alt="الهيئة الوطنية للجزيرة العربية السورية Logo" style="width:48px;height:48px;object-fit:contain;background:#fff;border-radius:50%;border:2px solid #009900;padding:4px;box-shadow:0 2px 8px #0002;">
+                </div>
+                <p class="footer-about">
+                    الهيئة الوطنية للجزيرة العربية السورية هيئة مستقلة تعمل على توثيق الانتهاكات ودعم حقوق السوريين منذ تأسيسها عام 2025.
+                </p>
+                <div class="footer-social">
+                    <a href="https://linktr.ee/Prjazirah?utm_source=linktree_profile_share&ltsid=9f9a740e-823f-406b-b86d-7f9454041934" class="social-icon">🔗</a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">الرئيسية</a></li>
+                    <li><a href="النبذة-العريفية.html" class="footer-link">النبذة العريفية</a></li>
+                    <li><a href="البيان-الرسمي.html" class="footer-link">البيان الرسمي</a></li>
+                    <li><a href="توثيق-الانتهاكات.html" class="footer-link">توثيق الانتهاكات</a></li>
+                    <li><a href="الأخبار.html" class="footer-link">الأخبار</a></li>
+                    <li><a href="مقالات.html" class="footer-link">مقالات</a></li>
+                    <li><a href="التقارير.html" class="footer-link">التقارير</a></li>
+                    <li><a href="المفقودين والمعتقلين.html" class="footer-link">المفقودون والمعتقلون</a></li>
+                    <li><a href="الاتصال.html" class="footer-link">الاتصال</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">اتصل بنا</h3>
+                <div class="footer-contact">
+                    <div class="footer-contact-item">
+                        <i class="contact-icon">📍</i>
+                        <span>دمشق، سوريا</span>
+                    </div>
+                   
+                    <div class="footer-contact-item">
+                        <i class="contact-icon">✉️</i>
+                        <span>prjazirah@gmail.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="contact-icon">🕒</i>
+                        <span>الأحد - الخميس: 8 صباحاً - 4 مساءً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 الهيئة الوطنية للجزيرة العربية السورية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- === JavaScript === -->
+    <script src="script.js"></script>
+    <script>
+    // Sadece ana sayfa (index) haberlerini göster
+    function loadNews() {
+      const section = document.getElementById('news-section');
+      if (!section) return;
+      let news = [];
+      try {
+        news = JSON.parse(localStorage.getItem('news') || '[]');
+      } catch (e) { news = []; }
+      // Sadece ana sayfa haberleri
+      const indexNews = news.filter(item => item.section === 'index');
+      if (indexNews.length > 0) {
+        section.innerHTML = indexNews.map(news => `
+          <article style="background:#fff;border-radius:8px;box-shadow:0 2px 8px #0001;padding:1.5rem;margin-bottom:1.5rem;">
+            ${news.imageData ? `<img src="${news.imageData}" alt="صورة الخبر" style="max-width:100%;border-radius:6px;margin-bottom:1rem;">` : ''}
+            <h2 style="color:var(--primary);font-size:1.2rem;margin-bottom:0.5rem;">${news.title}</h2>
+            <div style="font-size:1rem;line-height:1.7;">${news.content}</div>
+          </article>
+        `).join('');
+      } else {
+        section.innerHTML = '<div style="text-align:center;">لا توجد أخبار حالياً.</div>';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadNews);
+    </script>
+</body>
+</html>
